@@ -63,5 +63,50 @@ namespace verifica
                 _dataDiChiusura = value;
             }
         }
+        public Biblioteca(string nome,string indirizzo,DateTime inizio,DateTime fine)
+        {
+            Nome = nome;
+            Indirizzo = indirizzo;
+            DataApertura = inizio;
+            DataApertura = fine;
+            _libri = new List<Libro>();
+        }
+        public void AggiuntaLibro(Libro l)
+        {
+            _libri.Add(l);
+        }
+        public string RicercaLibroPerTitolo(string titolo)
+        {
+            string risultatoRicerca;
+            foreach(Libro libro in _libri)
+            {
+                if(libro.Titolo == titolo)
+                {
+                    risultatoRicerca = libro;
+                }
+                else
+                {
+                    risultatoRicerca = "non è stato trovato nessun titolo";
+                }
+            }
+            
+        }
+        public List<Libro> RicercaLibroPerAutore(Libro l) 
+        {
+            List<Libro> _autori = new List<Libro>();
+            foreach(Libro libro in _libri)
+            {
+                if (libro.Autore == l.Autore)
+                {
+                    _autori.Add(l);
+                }
+            }
+            return _autori;
+        }
+        public int NumeroLibriPresenti()
+        {
+            int numero;
+          return  numero= _libri.Count;
+        }
     }
 }
