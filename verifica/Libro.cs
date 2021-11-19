@@ -91,5 +91,24 @@ namespace verifica
             NumeroPagine = numero;
             AnnoDiPublicazione = data;
         }
+        public string ReadingTime(int tempo)
+        {
+            string lettura;
+            if (tempo < 100)
+            {
+                return lettura = "1h";
+
+            }else if(tempo>=100 && tempo <= 200)
+            {
+                return lettura = "2h";
+            }
+
+            return lettura = "la lettura complesssiva del libro dura piu di due ore";
+            
+        }
+        public override string ToString()
+        {
+            return Autore+" "+Titolo + " "+Editore + " "+NumeroPagine + " "+AnnoDiPublicazione;
+        }
     }
 }
