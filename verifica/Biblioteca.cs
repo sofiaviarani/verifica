@@ -6,6 +6,7 @@ namespace verifica
 {
     public class Biblioteca
     {
+        //commento di prova per la verifica 
         private string _nome;
         private string _indirizzo;
         private DateTime _dataApertura;
