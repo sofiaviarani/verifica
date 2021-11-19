@@ -4,13 +4,15 @@ using System.Text;
 
 namespace verifica
 {
-    class Biblioteca
+    public class Biblioteca
     {
         private string _nome;
         private string _indirizzo;
         private DateTime _dataApertura;
         private DateTime _dataDiChiusura;
-        private List<Libro> _libri;
+        private List<Libro> _libri = new List<Libro>();
+   
+        private Libro l;
   
         public string Nome
         {
@@ -64,12 +66,12 @@ namespace verifica
                 _dataDiChiusura = value;
             }
         }
-        public Biblioteca(string nome,string indirizzo,DateTime inizio,DateTime fine)
+        public Biblioteca(string nome,string indirizzo,DateTime inizio,DateTime fine,List<Libro>_libri)
         {
             Nome = nome;
             Indirizzo = indirizzo;
             DataApertura = inizio;
-            DataApertura = fine;
+            DataChiusura = fine;
             _libri = new List<Libro>();
         }
         public void AggiuntaLibro(Libro l)

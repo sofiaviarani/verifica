@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Button x:Name="btn_creaLibro" Content="LIBRO " HorizontalAlignment="Left" Height="52" Margin="361,315,0,0" VerticalAlignment="Top" Width="328" Click="btn_creaLibro_Click"/>
+        <ListBox x:Name="lst_libri_" HorizontalAlignment="Left" Height="297" Margin="61,77,0,0" VerticalAlignment="Top" Width="246"/>
+        <Label Content="NUMERO LIBRI PRESENTI:" HorizontalAlignment="Left" Height="39" Margin="62,385,0,0" VerticalAlignment="Top" Width="165"/>
+        <Label x:Name="lbl_risultatoNumero" Content="" HorizontalAlignment="Left" Height="39" Margin="242,385,0,0" VerticalAlignment="Top" Width="65"/>
+        <Button x:Name="btn_cerca_per_Autore" Content="CERCA X AUTORE " HorizontalAlignment="Left" Height="38" Margin="630,85,0,0" VerticalAlignment="Top" Width="110" Click="btn_cerca_per_Autore_Click"/>
+        <TextBox x:Name="txt_inserimentoRicercaPerAutore" HorizontalAlignment="Left" Height="38" Margin="375,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="237"/>
 
     </Grid>
 </Window>
