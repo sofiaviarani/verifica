@@ -83,6 +83,13 @@ namespace verifica
                 _numeroPagine = value;
             }
         }
-
+        public Libro(string autore, string titolo, string editore, int numero, DateTime data)
+        {
+            Autore = autore;
+            Titolo = titolo;
+            Editore = editore;
+            NumeroPagine = numero;
+            AnnoDiPublicazione = data;
+        }
     }
 }
