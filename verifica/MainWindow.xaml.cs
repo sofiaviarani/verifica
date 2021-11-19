@@ -36,6 +36,22 @@ namespace verifica
                 lst_libri_.Items.Add(l);
             }
         }
+        private void btn_creaLibro_Click(object sender, RoutedEventArgs e)
+        {
+            _biblioteca.AggiuntaLibro(Libro l);
+            AggiornaListBox();
+        }
+        public void AggiornaNUmero()
+        {
+            lbl_risultatoNumero.Content = _biblioteca.NumeroLibriPresenti();
+        }
 
+        private void btn_cerca_per_Autore_Click(object sender, RoutedEventArgs e)
+        {
+            List<Libro> _ricercaAutori = new List<Libro>();
+            _ricercaAutori = _biblioteca.RicercaLibroPerAutore(Libro l);
+            AggiornaListBox();
+
+        }
     }
 }
