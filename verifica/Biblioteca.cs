@@ -11,6 +11,7 @@ namespace verifica
         private DateTime _dataApertura;
         private DateTime _dataDiChiusura;
         private List<Libro> _libri;
+        //aaaaaaa
         public string Nome
         {
             get
