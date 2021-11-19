@@ -20,9 +20,22 @@ namespace verifica
     /// </summary>
     public partial class MainWindow : Window
     {
+        Biblioteca _biblioteca;
+        List<Libro> _libri;
         public MainWindow()
         {
             InitializeComponent();
+            _libri = new List<Libro>();
+            AggiornaNUmero();
+            AggiornaListBox();
         }
+        public void AggiornaListBox()
+        {
+            foreach(Libro l in _libri)
+            {
+                lst_libri_.Items.Add(l);
+            }
+        }
+
     }
 }
